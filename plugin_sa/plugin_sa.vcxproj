@@ -43,14 +43,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>${SolutionDir}\output\lib\</OutDir>
-    <IntDir>$(PLUGIN_SDK_DIR)\output\obj\$(ProjectName)\Release\</IntDir>
+    <IntDir>$(SolutionDir)\output\obj\$(ProjectName)\Release\</IntDir>
     <TargetName>plugin</TargetName>
     <TargetExt>.lib</TargetExt>
     <IncludePath>$(IncludePath);$(SolutionDir)\shared\dxsdk</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='zDebug|Win32'">
     <OutDir>${SolutionDir}\output\lib\</OutDir>
-    <IntDir>$(PLUGIN_SDK_DIR)\output\obj\$(ProjectName)\Debug\</IntDir>
+    <IntDir>$(SolutionDir)\output\obj\$(ProjectName)\Debug\</IntDir>
     <TargetName>plugin_d</TargetName>
     <TargetExt>.lib</TargetExt>
     <IncludePath>$(IncludePath);$(SolutionDir)\shared\dxsdk</IncludePath>
