@@ -15,6 +15,7 @@
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>plugin_sa</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -41,18 +42,18 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(PLUGIN_SDK_DIR)\output\lib\</OutDir>
+    <OutDir>${SolutionDir}\output\lib\</OutDir>
     <IntDir>$(PLUGIN_SDK_DIR)\output\obj\$(ProjectName)\Release\</IntDir>
     <TargetName>plugin</TargetName>
     <TargetExt>.lib</TargetExt>
-    <IncludePath>$(IncludePath);$(PLUGIN_SDK_DIR)\shared\dxsdk;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)\shared\dxsdk</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='zDebug|Win32'">
-    <OutDir>$(PLUGIN_SDK_DIR)\output\lib\</OutDir>
+    <OutDir>${SolutionDir}\output\lib\</OutDir>
     <IntDir>$(PLUGIN_SDK_DIR)\output\obj\$(ProjectName)\Debug\</IntDir>
     <TargetName>plugin_d</TargetName>
     <TargetExt>.lib</TargetExt>
-    <IncludePath>$(IncludePath);$(PLUGIN_SDK_DIR)\shared\dxsdk;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)\shared\dxsdk</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -73,7 +74,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_USE_MATH_DEFINES;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_DX9_SDK_INSTALLED;GTASA;PLUGIN_SGV_10US;RW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(PLUGIN_SDK_DIR)\plugin_sa;$(PLUGIN_SDK_DIR)\plugin_sa\game_sa;$(PLUGIN_SDK_DIR)\shared;$(PLUGIN_SDK_DIR)\shared\game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\plugin_sa;$(SolutionDir)\plugin_sa\game_sa;$(SolutionDir)\shared;$(SolutionDir)\shared\game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -100,7 +101,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_USE_MATH_DEFINES;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_DX9_SDK_INSTALLED;GTASA;PLUGIN_SGV_10US;RW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(PLUGIN_SDK_DIR)\plugin_sa;$(PLUGIN_SDK_DIR)\plugin_sa\game_sa;$(PLUGIN_SDK_DIR)\shared;$(PLUGIN_SDK_DIR)\shared\game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\plugin_sa;$(SolutionDir)\plugin_sa\game_sa;$(SolutionDir)\shared;$(SolutionDir)\shared\game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
